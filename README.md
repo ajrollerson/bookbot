@@ -5,11 +5,11 @@ Bookbot.
 Features:
 •	 Character count (Unicode-supported).
 •	 Word count (whitespace-delimited languages).
-•    Estimated reading time based on user-supplied or default words-per-minute, with basic error handling (personal addition).
+•  Estimated reading time based on user-supplied or default words-per-minute, with basic error handling (personal addition).
 •	 Case-insensitive processing.
 •	 Command-line interface.
 
- Language handling.
+Language handling.
 •	Bookbot can correctly parse the number of characters and words in any text. 
 •	When tested with other languages, it can also correctly count the number of characters.
 
@@ -35,5 +35,5 @@ Key lessons/insights:
 •	Finally clarified my understanding regarding function calling and returns: in the sense that the ‘returns make information available to the ‘caller’ of the function, means the code is the caller.
 •	That modularity is more useful for scalability, as it will enable features to be developed more quickly, rather than having to rewrite and restructure code each time.
 •	Developed a better understanding of handling Unicode text.
-•   Developed familiarity with Python’s 'sys' module for command-line argument handling.
+• Developed familiarity with Python’s 'sys' module for command-line argument handling.
 
