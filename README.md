@@ -9,11 +9,11 @@ Features:
 •	 Case-insensitive processing.
 •	 Command-line interface.
 
-Language handling.
+Language handling:
 •	Bookbot can correctly parse the number of characters and words in any text. 
 •	When tested with other languages, it can also correctly count the number of characters.
 
-Limitations.
+Limitations:
 •	Bookbot can correctly separate ‘characters’ with no fuss in any language, but ignores the nuances in languages such as Chinese (simplified) and Japanese, where a single character can also be a word.
 •	Word-count doesn’t apply well to languages like Japanese or Hindi, where white space is typically used between whole sentences instead of words.
 •	Bookbot does not currently include a language detection feature, so it treats all text as English-centric.
