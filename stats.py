@@ -1,3 +1,5 @@
+import time
+
 def word_count(text):
     text_words = text.split()
     return len(text_words)
@@ -23,4 +25,12 @@ def sorted_char_dict(character_count):
         return dict["num"]
     
     return sorted(char_list, reverse=True, key=lambda d: d['num'])
+
+def estimated_reading_time(text, wpm):
+    minutes = word_count(text) / int(wpm)
+    seconds = minutes * 60
+    return time.strftime("%H:%M:%S", time.gmtime(seconds))
+
+
+
 
