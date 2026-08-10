@@ -1,40 +1,72 @@
-Bookbot.
+# Bookbot
+Bookbot is a Python application that analyses text files by calculating word and character statistics. The project began as a guided Boot.dev assignment before being extended with reading-time estimation and tested against text in multiple languages.
 
-‘Bookbot’ is a python-centric programme that counts the words and characters in text files. This was a guided project hosted by boot.dev.
+## Technical Highlights
+- Command-line argument handling
+- Unicode text processing
+- Modular Python architecture
+- Input validation and error handling
 
-Features:
-•	 Character count (Unicode-supported).
-•	 Word count (whitespace-delimited languages).
-•  Estimated reading time based on user-supplied or default words-per-minute, with basic error handling (personal addition).
-•	 Case-insensitive processing.
-•	 Command-line interface.
+## Tech Stack
+- Python
 
-Language handling:
-•	Bookbot can correctly parse the number of characters and words in any text. 
-•	When tested with other languages, it can also correctly count the number of characters.
+## Demo
+### Pride and Prejudice
 
-Limitations:
-•	Bookbot can correctly separate ‘characters’ with no fuss in any language, but ignores the nuances in languages such as Chinese (simplified) and Japanese, where a single character can also be a word.
-•	Word-count doesn’t apply well to languages like Japanese or Hindi, where white space is typically used between whole sentences instead of words.
-•	Bookbot does not currently include a language detection feature, so it treats all text as English-centric.
+Demonstration calculating stats for 'Pride and Prejudice'.
 
-Possible future improvements:
-•	Adding language modules, which can parse texts from certain languages appropriately, like Chinese, Japanese, Hindi, etc…, which can identify ‘words’ more accurately.  
+![Pride and Prejudice demonstration](data/pride_and_prejudice_demo.png)
 
-Usage:
-• Navigate to the ‘bookbot’ directory.
-• Run the programme with ‘python3 main.py <file_path> [wpm]’.
-• Note: if no valid WPM argument is provided, a default value of 250 will be used.
-• Current books can be found in ‘books’, while test documents for other languages can be found in ‘testbooks’.
+### Vietnamese Text Demonstration
 
-Examples:
-‘python3 main.py books/prideandprejudice.txt’
-‘python3 main.py testbooks/examplejapanese.txt’
+Demonstration calculating stats for a Vietnamese example text (abridged).
 
-Key lessons/insights:
-•	Learnt that code and functions should be piped/imported in a single direction, not imported reciprocally, creating circular dependencies.
-•	Finally clarified my understanding regarding function calling and returns: in the sense that the ‘returns make information available to the ‘caller’ of the function, means the code is the caller.
-•	That modularity is more useful for scalability, as it will enable features to be developed more quickly, rather than having to rewrite and restructure code each time.
-•	Developed a better understanding of handling Unicode text.
-• Developed familiarity with Python’s 'sys' module for command-line argument handling.
+![Vietnamese text demonstration](data/example_vietnamese_demo.png)
+
+## Quick Start
+### Clone the Repository
+```bash
+git clone https://github.com/ajrollerson/bookbot.git
+cd bookbot
+```
+
+### Run the Application
+```bash
+python3 main.py <file_path> [wpm]
+```
+
+Note: Current books can be found in /books, while test documents for other languages can be found in /testbooks.
+
+### Example: Moby-Dick
+```bash
+python3 main.py books/mobydick.txt 300
+```
+
+### Example Japanese Text
+```bash
+python3 main.py testbooks/examplejapanese.txt
+```
+
+Note: if no valid WPM argument is provided, a default value of 250 will be used.
+
+## Key Features
+### Core Functionality
+- Character count (Unicode-supported)
+- Word counting using whitespace delimiters
+- Case-insensitive processing
+- Command-line interface
+
+### Independent Extension
+- Estimated reading time based on user-supplied or default words-per-minute, with basic error handling
+
+## Design Choices
+### Reading-Time Estimate
+Reading-time estimation was added as an additional statistic alongside the existing word and character counts. The calculation uses the document's word count and a user-supplied words-per-minute value, with a default value of 250 provided when no valid WPM argument is supplied. This keeps the feature optional while allowing users to adjust the estimate according to their reading speed.
+
+## Known Limitations
+- Word counting relies on whitespace delimiters and therefore does not accurately represent word boundaries in languages such as Chinese and Japanese
+- Bookbot does not currently detect the language of an input document and applies the same word-counting approach to all text
+
+## Future Improvements
+- Add language-specific parsing modules for Chinese, Japanese, Hindi, and other languages 
 
