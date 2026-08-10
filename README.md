@@ -57,7 +57,7 @@ Note: if no valid WPM argument is provided, a default value of 250 will be used.
 - Command-line interface
 
 ### Independent Extension
-- Estimated reading time based on user-supplied or default words-per-minute, with basic error handling
+- Implemented estimated reading-time calculation using user-supplied or default words-per-minute values
 
 ## Design Choices
 ### Reading-Time Estimate
