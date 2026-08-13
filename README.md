@@ -24,6 +24,7 @@ Demonstration calculating stats for a Vietnamese example text (abridged).
 ![Vietnamese text demonstration](data/example_vietnamese_demo.png)
 
 ## Quick Start
+The following commands assume a Bash/WSL environment.
 ### Clone the Repository
 ```bash
 git clone https://github.com/ajrollerson/bookbot.git
